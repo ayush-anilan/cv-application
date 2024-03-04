@@ -29,6 +29,23 @@ function App() {
     });
   };
 
+  const handleExample = () => {
+    // Example details you want to fill in
+    const exampleData = {
+      name: 'John Doe',
+      phone: '123-456-7890',
+      email: 'john.doe@example.com',
+      college: 'Example University',
+      course: 'Computer Science',
+      date: '2018 - 2022',
+      project: 'Example Project',
+      details: 'This is an example project detail.',
+    };
+
+    setFormData(exampleData);
+  };
+
+
   return (
     <div className='relative container mx-auto flex w-full my-5 gap-10'>
       <div className='form w-2/4 border'>
@@ -39,8 +56,14 @@ function App() {
         <div className="preview border w-128 h-140">
           <Preview formData={formData} />
         </div>
-        <div className="download-button">
-          <button className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-3' onClick={handleDownloadCV}>Download CV</button>
+        <div className='flex gap-5'>
+
+          <div className="download-button">
+            <button className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-3' onClick={handleDownloadCV}>Download CV</button>
+          </div>
+          <div className='preview-button'>
+            <button className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-3' onClick={handleExample}>Example</button>
+          </div>
         </div>
       </div>
     </div>

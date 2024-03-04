@@ -1,5 +1,7 @@
 import React from 'react'
 
+
+
 function Preview({ formData }) {
     return (
         <div className='preview font-serif w-128 h-140 p-5'>
